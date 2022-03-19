@@ -1,17 +1,16 @@
 {% extends 'index/index.html' %}
 
-{% block 'header_block' %}
-                            <h1 class="mb-5">
-                                Esta es la plantilla de prueba
-                            </h1>
-{% endblock 'header_block' %}
+
+{% block header_text_block %}
+        <h1 class="mb-5">
+            ¿Qué onda Lema?
+        </h1>
+{% endblock header_text_block %}
 
 {% block 'body_block' %}
         <h2>
-            Hola esta es mi plantilla
+            {{nombre}}
         </h2>
-
-        {{nombre}}
 
         {% if nombre != apellido %}
             <h3>{{apellido}}</h3>
@@ -22,5 +21,5 @@
                 {{valor}}
             </li>
         {% endfor %}
-{% endblock  %}
+{% endblock 'body_block'  %}
 
